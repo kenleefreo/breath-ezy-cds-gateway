@@ -1,0 +1,14 @@
+# OpenCDS source is CLONED at pinned commits by build.sh — never vendored here.
+src/
+
+# Maven / build output
+target/
+*.war
+*.jar
+
+# Local env / secrets — real values are injected at deploy time, never committed.
+.env
+*.local
+
+# OS / editor
+.DS_Store
