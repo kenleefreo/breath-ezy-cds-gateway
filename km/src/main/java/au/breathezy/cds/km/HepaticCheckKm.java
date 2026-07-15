@@ -42,8 +42,11 @@ public final class HepaticCheckKm extends Fl30Km {
         String guidance = str(rec, "guidance");
         boolean contra = "hepatic_contraindicated".equals(action);
         String reason = d + ": " + action + (guidance == null ? "" : " — " + guidance);
+        Flag f = Flag.of(contra ? "hepatic_contraindicated" : "hepatic_adjustment_required",
+                contra ? CheckVerdict.Severity.critical : CheckVerdict.Severity.moderate,
+                d + " " + action + (guidance == null ? "" : ": " + guidance), d);
         return contra
-                ? CheckVerdict.hardFail(checkId(), reason, "hepatic_contraindicated")
-                : CheckVerdict.warn(checkId(), CheckVerdict.Severity.moderate, reason, "hepatic_adjustment_required");
+                ? CheckVerdict.hardFail(checkId(), reason, f)
+                : CheckVerdict.warn(checkId(), CheckVerdict.Severity.moderate, reason, f);
     }
 }

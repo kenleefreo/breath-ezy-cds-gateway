@@ -37,7 +37,11 @@ public final class AllergyCheckKm extends Fl30Km {
                 if (group.equals(kb.getAllergyGroup(a))) {
                     return CheckVerdict.hardFail(checkId(),
                             "cross-reactivity: " + d + " shares allergy group '" + group + "' with a documented allergen",
-                            "allergy_cross_reactivity");
+                            // engine.js's flag text, mirrored: the REASON explains the verdict, the FLAG is what the
+                            // clinician reads in the interaction/contraindication list. They are different sentences
+                            // in the engine and must stay different here.
+                            Flag.of("allergy_cross_reactivity", CheckVerdict.Severity.critical,
+                                    d + " cross-reacts with a documented allergy (group " + group + ")", d));
                 }
             }
         }

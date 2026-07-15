@@ -111,7 +111,22 @@ public abstract class Fl30Km implements CdsHooksExecutionEngine {
         verdict.addProperty("status", v.status.name());
         if (v.severity != null) verdict.addProperty("severity", v.severity.name());
         if (v.reason != null) verdict.addProperty("reason", v.reason);
-        if (v.flagType != null) verdict.addProperty("flag_type", v.flagType);
+        // The FLAGS array — what the shim maps into OpenCdsResponse.flags[]. Each carries only what the
+        // locked, .strict() OpenCdsFlagSchema allows: flag_type, severity, description, and optionally
+        // drug_a / drug_b. A field the wire forbids would fail the WHOLE response, so nothing else rides.
+        if (!v.flags.isEmpty()) {
+            var farr = new com.google.gson.JsonArray();
+            for (Flag f : v.flags) {
+                JsonObject fo = new JsonObject();
+                fo.addProperty("flag_type", f.flagType);
+                fo.addProperty("severity", f.severity.name());
+                fo.addProperty("description", f.description);
+                if (f.drugA != null) fo.addProperty("drug_a", f.drugA);
+                if (f.drugB != null) fo.addProperty("drug_b", f.drugB);
+                farr.add(fo);
+            }
+            verdict.add("flags", farr);
+        }
         if (!v.missingFactsRequired.isEmpty()) {
             var arr = new com.google.gson.JsonArray();
             v.missingFactsRequired.forEach(arr::add);

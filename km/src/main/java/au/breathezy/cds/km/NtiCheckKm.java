@@ -47,6 +47,9 @@ public final class NtiCheckKm extends Fl30Km {
         }
         String hint = rec != null && str(rec, "monitoring_hint") != null ? " — " + str(rec, "monitoring_hint") : "";
         return CheckVerdict.hardFail(checkId(),
-                "NTI drug (" + d + ") without a documented monitoring plan" + hint, "nti");
+                "NTI drug (" + d + ") without a documented monitoring plan" + hint,
+                Flag.of("nti", CheckVerdict.Severity.critical,
+                        d + " is a narrow therapeutic index drug; a monitoring plan" + interval
+                                + " must be documented before prescribing", d));
     }
 }

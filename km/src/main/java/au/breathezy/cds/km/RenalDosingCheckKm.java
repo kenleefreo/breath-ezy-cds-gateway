@@ -53,9 +53,15 @@ public final class RenalDosingCheckKm extends Fl30Km {
         if (egfr < threshold) {
             boolean contra = "renal_contraindicated".equals(action);
             String reason = d + ": " + action + " below eGFR " + fmt(threshold);
+            // engine.js flag: description `${drug} ${action}`, flag_type = the ACTION itself (both are in
+            // the frozen flag_type enum). Its renal_threshold object cannot ride: OpenCdsFlagSchema is
+            // .strict() and has no such field, and the contract is locked — so it is dropped here rather
+            // than smuggled, because a forbidden field would fail the WHOLE response.
+            Flag f = Flag.of(action, contra ? CheckVerdict.Severity.critical : CheckVerdict.Severity.moderate,
+                    d + " " + action, d);
             return contra
-                    ? CheckVerdict.hardFail(checkId(), reason, "renal_contraindicated")
-                    : CheckVerdict.warn(checkId(), CheckVerdict.Severity.moderate, reason, "renal_adjustment_required");
+                    ? CheckVerdict.hardFail(checkId(), reason, f)
+                    : CheckVerdict.warn(checkId(), CheckVerdict.Severity.moderate, reason, f);
         }
         return CheckVerdict.pass(checkId());
     }

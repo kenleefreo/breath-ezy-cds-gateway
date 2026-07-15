@@ -53,16 +53,22 @@ public final class PregnancyCheckKm extends Fl30Km {
 
         if ("pregnant".equals(status)) {
             if ("X".equals(cat) || contraindicated) {
+                // engine.js also carries au_reference ("TGA Prescribing Medicines in Pregnancy") on this
+                // flag; the locked OpenCdsFlagSchema is .strict() and has no such field. Dropped, not
+                // smuggled — a forbidden field would fail the whole response.
                 return CheckVerdict.hardFail(checkId(),
                         "TGA pregnancy category " + (cat.isEmpty() ? "X" : cat) + ": "
                                 + (guidance == null ? "contraindicated in pregnancy" : guidance),
-                        "pregnancy_category_x");
+                        Flag.of("pregnancy_category_x", CheckVerdict.Severity.critical,
+                                d + " — TGA category " + (cat.isEmpty() ? "X" : cat) + ": "
+                                        + (guidance == null ? "teratogen; contraindicated in pregnancy" : guidance), d));
             }
             if ("D".equals(cat)) {
                 return CheckVerdict.warn(checkId(), CheckVerdict.Severity.moderate,
                         "TGA pregnancy category D: "
                                 + (guidance == null ? "evidence of fetal risk; use only if benefit justifies" : guidance),
-                        "pregnancy_category_d");
+                        Flag.of("pregnancy_category_d", CheckVerdict.Severity.moderate,
+                                d + " — TGA category D: " + (guidance == null ? "evidence of fetal risk" : guidance), d));
             }
             return CheckVerdict.pass(checkId(), "TGA pregnancy category " + (cat.isEmpty() ? "A/B/C" : cat));
         }

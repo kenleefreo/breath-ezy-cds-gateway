@@ -43,6 +43,9 @@ public final class Schedule8CheckKm extends Fl30Km {
         }
         return CheckVerdict.hardFail(checkId(),
                 "AU schedule S8 (SUSMP): S8 drug requires a PDMP (SafeScript) check — not performed",
-                "schedule_8_pdmp_required");
+                // engine.js also carries au_reference on this flag; the locked OpenCdsFlagSchema is .strict()
+                // and has no such field, so it cannot ride. Dropped, not smuggled.
+                Flag.of("schedule_8_pdmp_required", CheckVerdict.Severity.critical,
+                        d + " is S8 (SUSMP Poisons Standard); PDMP (SafeScript) check required before prescribing", d));
     }
 }
