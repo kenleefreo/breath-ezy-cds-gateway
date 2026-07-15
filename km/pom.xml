@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Breath-Ezy FL-30 knowledge modules for OpenCDS (FL-34 Phase B / B2-B4).
+
+  STANDALONE, deliberately. It does NOT join the cloned OpenCDS reactor under /src (which build.sh
+  clones at the pinned commits and .gitignore excludes). It compiles against the pinned
+  7.1.0-SNAPSHOT artifacts that Phase A's build installed into the local repository, so our own
+  knowledge modules are versioned in THIS repo while OpenCDS itself stays a pinned external.
+
+  NO NEW DEPENDENCIES. Everything below is already on the pinned classpath:
+    - opencds-hooks-engine-api : the CdsHooksExecutionEngine SPI a KM must implement
+    - opencds-hooks-model      : CdsRequest / HookContext / Card / CdsResponse
+    - gson                     : already used BY opencds-hooks-model's own HookContext
+                                 (HookContext.toJsonObject takes a com.google.gson type), so
+                                 reading the KB with it adds nothing to the classpath.
+  Adding a Maven dependency mid-execution is a stack change and would need a fresh approval.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>au.breathezy.cds</groupId>
+    <artifactId>breath-ezy-fl30-km</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Breath-Ezy FL-30 Knowledge Modules</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Phase A's build pin is JDK 17. Compiling with a newer JDK is fine; the OUTPUT must stay
+             17 so the KM loads in the same Tomcat 11 / Java 17 runtime the image ships. -->
+        <maven.compiler.release>17</maven.compiler.release>
+        <opencds.version>7.1.0-SNAPSHOT</opencds.version>
+        <gson.version>2.14.0</gson.version>
+        <junit.version>6.0.3</junit.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.opencds.hooks</groupId>
+            <artifactId>opencds-hooks-engine-api</artifactId>
+            <version>${opencds.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.opencds.hooks</groupId>
+            <artifactId>opencds-hooks-model</artifactId>
+            <version>${opencds.version}</version>
+            <scope>provided</scope>
+            <!-- jaxb-ri is an AGGREGATOR pom that drags release-documentation (docbook) and samples
+                 ZIPs — build artifacts, not code. They are not on the pinned classpath Phase A built,
+                 and nothing here touches JAXB. Excluding them is not a stack change: it removes
+                 documentation archives from OUR module's resolution, and the runtime WAR is
+                 unaffected (these deps are provided-scope and OpenCDS ships its own). -->
+            <exclusions>
+                <exclusion><groupId>com.sun.xml.bind</groupId><artifactId>jaxb-ri</artifactId></exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource><directory>src/main/resources</directory></resource>
+            <!-- The KB is packaged FROM THE ONE COPY at the repo root. Copying kb/ into
+                 src/main/resources would create a second bundle that could silently diverge from the
+                 manifest the export wrote — and "which copy is the signed one?" is not a question a
+                 clinical artifact should ever raise. -->
+            <resource>
+                <directory>${project.basedir}/../kb</directory>
+                <targetPath>kb</targetPath>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.15.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.5</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>

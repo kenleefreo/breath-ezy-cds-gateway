@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  Breath-Ezy FL-30 knowledge module registrations (FL-34 Phase B).
+
+  Each check is its own CDS service, discoverable at /opencds/r4/hooks/cds-services. One service per
+  check mirrors D-B-2's card encoding (one card per check) and, more importantly, mirrors engine.js's
+  own structure: the checks are independent, and composing them into an overall verdict is the
+  CLIENT's job, behind the frozen contract. A single "run everything" service would put composition
+  inside the gateway, which is exactly the responsibility this arrangement keeps out of it.
+
+  packageType is CLASSPATH because OpenCDS's CdsHooksKnowledgeLoader supports only that: it does
+  Class.forName(packageId) and casts to CdsHooksExecutionEngine. There is no Drools ruleset and no
+  jar-as-KM — a KM here IS a Java class.
+
+  status is DRAFT deliberately. Nothing about this gateway is patient-facing: the breath-ezy
+  cds-adapter slot stays EMPTY → HARD_FAIL until an endpoint is wired AND staging-validated (A4), and
+  receipts stay mode=mock until FL-50. Promoting these to a live status is a separate, gated decision.
+
+  hook: `order-sign` is the correct CDS Hooks hook for prescribing safety — it fires when a clinician
+  is signing an order, which is exactly the decision point these checks inform. The Phase C shim
+  supplies drug + resolved_facts in the hook context.
+-->
+<ns2:knowledgeModules xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xmlns:ns2="org.opencds.config.rest.v2"
+                      xsi:schemaLocation="org.opencds.config.rest.v2 https://opencds.org/schema/OpenCDSConfigRest.xsd">
+
+    <!-- ══ Tranche 1 — the five DEFAULT_CHECKS (B2) ══ -->
+
+    <knowledgeModule>
+        <identifier scopingEntityId="au.breathezy.cds" businessId="fl30-allergy-check" version="1.0"/>
+        <status>DRAFT</status>
+        <cdsHook>
+            <hook>order-sign</hook>
+            <title>FL-30 Allergy Cross-Reactivity Check</title>
+            <description>Mirrors engine.js allergy_check against the clinician-signed FL-30 cross-reactivity registry. HARD_FAIL on a shared allergy group; NOT_RUN when allergy status is absent.</description>
+            <id>fl30-allergy-check</id>
+            <fhirVersion>R4</fhirVersion>
+        </cdsHook>
+        <executionEngine>CDS Hooks Adapter</executionEngine>
+        <semanticSignifierId scopingEntityId="org.hl7.fhir" businessId="cds-hooks-fhir-r4" version="1.0"/>
+        <package>
+            <packageType>CLASSPATH</packageType>
+            <packageId>au.breathezy.cds.km.AllergyCheckKm</packageId>
+        </package>
+        <timestamp>2026-07-15T00:00:00.000+10:00</timestamp>
+        <userId>breath-ezy</userId>
+    </knowledgeModule>
+
+    <knowledgeModule>
+        <identifier scopingEntityId="au.breathezy.cds" businessId="fl30-interaction-check" version="1.0"/>
+        <status>DRAFT</status>
+        <cdsHook>
+            <hook>order-sign</hook>
+            <title>FL-30 Drug-Drug Interaction Check</title>
+            <description>Mirrors engine.js interaction_check against 872 signed interaction records. HARD_FAIL on a critical hit, WARN otherwise; NOT_RUN when the medication list is absent.</description>
+            <id>fl30-interaction-check</id>
+            <fhirVersion>R4</fhirVersion>
+        </cdsHook>
+        <executionEngine>CDS Hooks Adapter</executionEngine>
+        <semanticSignifierId scopingEntityId="org.hl7.fhir" businessId="cds-hooks-fhir-r4" version="1.0"/>
+        <package>
+            <packageType>CLASSPATH</packageType>
+            <packageId>au.breathezy.cds.km.InteractionCheckKm</packageId>
+        </package>
+        <timestamp>2026-07-15T00:00:00.000+10:00</timestamp>
+        <userId>breath-ezy</userId>
+    </knowledgeModule>
+
+    <knowledgeModule>
+        <identifier scopingEntityId="au.breathezy.cds" businessId="fl30-renal-dosing-check" version="1.0"/>
+        <status>DRAFT</status>
+        <cdsHook>
+            <hook>order-sign</hook>
+            <title>FL-30 Renal Dosing Check</title>
+            <description>Mirrors engine.js renal_dosing_check against 104 signed eGFR rules. HARD_FAIL when contraindicated below threshold, WARN when dose reduction is required; NOT_RUN when a rule exists but eGFR is absent.</description>
+            <id>fl30-renal-dosing-check</id>
+            <fhirVersion>R4</fhirVersion>
+        </cdsHook>
+        <executionEngine>CDS Hooks Adapter</executionEngine>
+        <semanticSignifierId scopingEntityId="org.hl7.fhir" businessId="cds-hooks-fhir-r4" version="1.0"/>
+        <package>
+            <packageType>CLASSPATH</packageType>
+            <packageId>au.breathezy.cds.km.RenalDosingCheckKm</packageId>
+        </package>
+        <timestamp>2026-07-15T00:00:00.000+10:00</timestamp>
+        <userId>breath-ezy</userId>
+    </knowledgeModule>
+
+    <knowledgeModule>
+        <identifier scopingEntityId="au.breathezy.cds" businessId="fl30-nti-check" version="1.0"/>
+        <status>DRAFT</status>
+        <cdsHook>
+            <hook>order-sign</hook>
+            <title>FL-30 Narrow Therapeutic Index Check</title>
+            <description>Mirrors engine.js nti_check against the 53-record signed NTI register. HARD_FAIL when an NTI drug has no documented monitoring plan — undocumented IS the finding, not an unknown.</description>
+            <id>fl30-nti-check</id>
+            <fhirVersion>R4</fhirVersion>
+        </cdsHook>
+        <executionEngine>CDS Hooks Adapter</executionEngine>
+        <semanticSignifierId scopingEntityId="org.hl7.fhir" businessId="cds-hooks-fhir-r4" version="1.0"/>
+        <package>
+            <packageType>CLASSPATH</packageType>
+            <packageId>au.breathezy.cds.km.NtiCheckKm</packageId>
+        </package>
+        <timestamp>2026-07-15T00:00:00.000+10:00</timestamp>
+        <userId>breath-ezy</userId>
+    </knowledgeModule>
+
+    <knowledgeModule>
+        <identifier scopingEntityId="au.breathezy.cds" businessId="fl30-age-appropriateness-check" version="1.0"/>
+        <status>DRAFT</status>
+        <cdsHook>
+            <hook>order-sign</hook>
+            <title>FL-30 Age Appropriateness Check</title>
+            <description>Mirrors engine.js age_appropriateness_check. Under-18 is a HARD_FAIL routed to in-person review (no paediatric dosing tables exist); an UNKNOWN age is NOT_RUN so no dose can reach a possible child. Pure age logic — no knowledge base.</description>
+            <id>fl30-age-appropriateness-check</id>
+            <fhirVersion>R4</fhirVersion>
+        </cdsHook>
+        <executionEngine>CDS Hooks Adapter</executionEngine>
+        <semanticSignifierId scopingEntityId="org.hl7.fhir" businessId="cds-hooks-fhir-r4" version="1.0"/>
+        <package>
+            <packageType>CLASSPATH</packageType>
+            <packageId>au.breathezy.cds.km.AgeAppropriatenessCheckKm</packageId>
+        </package>
+        <timestamp>2026-07-15T00:00:00.000+10:00</timestamp>
+        <userId>breath-ezy</userId>
+    </knowledgeModule>
+
+</ns2:knowledgeModules>
