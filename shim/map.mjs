@@ -71,12 +71,40 @@ const FLAG_TYPES = new Set([
   "stewardship_narrow_spectrum_preferred", "stewardship_culture_pending",
 ]);
 
-/** Build the CDS Hooks R4 request for one service. The KMs read `drug` + `resolved_facts` from context. */
+/**
+ * Build the CDS Hooks R4 request for one service. The KMs read `drug` + `resolved_facts` from context.
+ *
+ * ══ F-C7 — OpenCDS demands a "focal person id", and we have no patient to name ══
+ * Without `context.patientId` the adapter rejects the call outright: HTTP 500, "No focal person id
+ * (patient ID) found." Found the first time a real container was in the loop; no unit test could have
+ * shown it, because the requirement lives in OpenCDS's adapter, not in our contract.
+ *
+ * But the locked `OpenCdsRequest` carries NO patient identifier, and that is deliberate — trust
+ * boundary #4: the IHI and demographics stay inside the identity boundary, and everything downstream
+ * works from encounter-scoped references. There is nothing here that names a person, by design, and
+ * the fix must not invent one.
+ *
+ * So the focal person id is the REQUEST ID. It satisfies the adapter and asserts nothing about a
+ * human being:
+ *   - it is OPAQUE — no demographics, no IHI, nothing re-identifiable;
+ *   - it is UNIQUE PER REQUEST, which matters: a fixed placeholder would make every consultation look
+ *     like the same "patient" to OpenCDS, and any per-person state it kept would silently carry across
+ *     encounters. A cross-patient leak is not a price worth paying for a tidier constant;
+ *   - it is already the correlation key threaded through the pipeline, so an operator tracing a
+ *     gateway call finds the same id they started with.
+ *
+ * It is NOT a patient identifier and must never be read as one. Our KMs never look at it.
+ */
 export function buildHookRequest(request, hookInstance) {
   return {
     hook: "order-sign",
     hookInstance,
-    context: { drug: request.drug, resolved_facts: request.resolved_facts ?? {} },
+    context: {
+      // See F-C7 above: an opaque per-request token, NOT a person.
+      patientId: request.request_id,
+      drug: request.drug,
+      resolved_facts: request.resolved_facts ?? {},
+    },
   };
 }
 
