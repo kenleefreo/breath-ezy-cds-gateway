@@ -1,0 +1,3926 @@
+{
+  "km_set": "fl30-kb:v1",
+  "capability": "scheduling",
+  "dataset_version": "pharm-au-scheduling:v0.1.0-dev",
+  "records": [
+    {
+      "ingredient": "oxycodone",
+      "schedule": "S8",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (TGA, Federal Register of Legislation)",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft transcription of cited source)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "morphine",
+      "schedule": "S8",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (TGA, Federal Register of Legislation)",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft transcription of cited source)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "fentanyl",
+      "schedule": "S8",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (TGA, Federal Register of Legislation)",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft transcription of cited source)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "methadone",
+      "schedule": "S8",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (TGA, Federal Register of Legislation)",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft transcription of cited source)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "hydromorphone",
+      "schedule": "S8",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (TGA, Federal Register of Legislation)",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft transcription of cited source)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "methylphenidate",
+      "schedule": "S8",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (TGA, Federal Register of Legislation)",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft transcription of cited source)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "diazepam",
+      "schedule": "S4D",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (TGA, Federal Register of Legislation)",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft transcription of cited source)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "amoxicillin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (TGA, Federal Register of Legislation)",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft transcription of cited source)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "cefalexin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (TGA, Federal Register of Legislation)",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft transcription of cited source)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      },
+      "also_known_as": [
+        "cephalexin"
+      ],
+      "attested_as": "cephalexin"
+    },
+    {
+      "ingredient": "codeine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (TGA, Federal Register of Legislation)",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft transcription of cited source)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "naproxen",
+      "schedule": "S3",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (TGA, Federal Register of Legislation)",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft transcription of cited source)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "ibuprofen",
+      "schedule": "S2",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (TGA, Federal Register of Legislation)",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft transcription of cited source)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "paracetamol",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (TGA, Federal Register of Legislation)",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft transcription of cited source)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "ketamine",
+      "schedule": "S8",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "salbutamol",
+      "schedule": "S3",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "ciprofloxacin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "doxycycline",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "azithromycin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "erythromycin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "metronidazole",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "trimethoprim",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "ceftriaxone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "vancomycin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "gentamicin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "rifampicin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "aciclovir",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "warfarin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "digoxin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "amiodarone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "metformin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "sotalol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "lithium",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "clonazepam",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "valproate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "SUSMP / Poisons Standard (self-authored draft; corroborate against the current Poisons Standard at review). NOT derived from LITFL notes.",
+        "source_ref": "susmp-poisons-standard",
+        "authored_by": "claude-fable-5 (agent, draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "acarbose",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "aclidinium",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "formoterol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "adapalene",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "benzoyl peroxide",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "alendronate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "atorvastatin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "baclofen",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "balsalazide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "beclometasone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "glycopyrronium",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "sodium bicarbonate",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "bimatoprost",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "timolol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "bisacodyl",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "colecalciferol",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "alfuzosin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "allopurinol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "alogliptin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "amantadine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "amiloride",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "hydrochlorothiazide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "amlodipine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "valsartan",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "bisoprolol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "brimonidine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "brinzolamide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "anastrozole",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "apixaban",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "apomorphine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "atenolol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "bromocriptine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "budesonide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "cabergoline",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "calcipotriol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "betamethasone dipropionate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "calcitriol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "calcium",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "candesartan",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "carbamazepine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "carbimazole",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "carbomer-980",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "carmellose sodium",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "carvedilol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "chlortalidone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "ciclesonide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "ciclosporin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "citalopram",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "dapagliflozin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "sitagliptin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "desmopressin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "desvenlafaxine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "dexamethasone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "dextran-70",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "hypromellose",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "cortisone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "cyproterone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "dabigatran",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "citric acid",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "lauryl sulfoacetate sodium",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "sorbitol",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "clonidine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "clopidogrel",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "aspirin",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "colestyramine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "diltiazem",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "dorzolamide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "duloxetine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "dutasteride",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "tamsulosin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "empagliflozin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "linagliptin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "enalapril",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "entacapone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "eplerenone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "eprosartan",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "ezetimibe",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "simvastatin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "famotidine",
+      "schedule": "S2",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "febuxostat",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "felodipine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "fenofibrate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "finasteride",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "fluoxetine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "fluticasone furoate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "fluticasone furoate + umeclidinium + vilanterol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "estriol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "ethosuximide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "everolimus",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "exemestane",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "vilanterol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "fluticasone propionate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "salmeterol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "fluvoxamine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "furosemide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "gemfibrozil",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "glibenclamide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "gliclazide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "escitalopram",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "esomeprazole",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "estradiol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "hydrocortisone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "indacaterol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "mometasone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "indapamide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "irbesartan",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "glimepiride",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "glipizide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "glyceryl trinitrate",
+      "schedule": "S3",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "hyaluronate sodium",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "lamotrigine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "lansoprazole",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "lanthanum",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "latanoprost",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "isosorbide dinitrate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "isosorbide mononitrate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "ivabradine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "labetalol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "lacosamide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "levodopa + benserazide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "levodopa + carbidopa",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "levodopa + carbidopa + entacapone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "linagliptin + metformin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "leflunomide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "lercanidipine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "letrozole",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "levetiracetam",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "mianserin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "minocycline",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "minoxidil",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "mirtazapine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "moclobemide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "liothyronine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "lisinopril",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "macrogol 3350",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "medroxyprogesterone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "mesalazine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "methenamine hippurate",
+      "schedule": "S2",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "methotrexate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "metoprolol succinate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "metoprolol tartrate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "nifedipine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "nizatidine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "norethisterone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "olmesartan",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "montelukast",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "moxonidine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "mycophenolate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "nebivolol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "nicorandil",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "perampanel",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "perindopril",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "phenoxymethylpenicillin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "potassium chloride",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "pramipexole",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "pravastatin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "prazosin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "prednisolone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "phenytoin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "phosphorus",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "pilocarpine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "pioglitazone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "pizotifen",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "omeprazole",
+      "schedule": "S3",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "opicapone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "oxcarbazepine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "oxybutynin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "pancreatic extract",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "pantoprazole",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "paroxetine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "penicillamine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "prednisone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "probenecid",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "progesterone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "propantheline",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "propranolol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "propylthiouracil",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "pyridostigmine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "rabeprazole",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "raloxifene",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "ramipril",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "rasagiline",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "reboxetine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "riluzole",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "risedronate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "rivaroxaban",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "rosuvastatin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "rotigotine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "sacubitril",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "safinamide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "sertraline",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "sevelamer",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "silodosin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "sirolimus",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "spironolactone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "sucroferric oxyhydroxide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "sulfasalazine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "tetrabenazine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "thiamine",
+      "schedule": "unscheduled",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "tiagabine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "ticagrelor",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "sulthiame",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "tacrolimus",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "tamoxifen",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "telmisartan",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "tenofovir disoproxil",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "emtricitabine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "teriparatide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "testosterone",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "saxagliptin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "saxagliptin + metformin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "selegiline",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "semaglutide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "trandolapril",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "verapamil",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "tranylcypromine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "travoprost",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "umeclidinium",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "tiotropium",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "olodaterol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "tiotropium + olodaterol",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "tobramycin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "topiramate",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "venlafaxine",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "vigabatrin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "vildagliptin",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "ingredient": "zonisamide",
+      "schedule": "S4",
+      "state_appendix_flags": [],
+      "effective_date": "2026-07-13",
+      "provenance": {
+        "source": "self-authored (multi-agent authored + adversarially verified; AU/AMH context; corroborate against AMH/TGA at review). NOT derived from LITFL notes.",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 workflow (author+verify agents; draft — KL to attest)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    }
+  ]
+}

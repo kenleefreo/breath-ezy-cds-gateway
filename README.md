@@ -25,11 +25,48 @@ knowledge base — it never introduces new clinical knowledge. Deploying this im
 
 | Phase | What | Status |
 |---|---|---|
-| A | Pinned reproducible build (`build.sh` + `Dockerfile`) | **this repo, now** |
-| B | FL-30 KB → OpenCDS knowledge modules (Java KMs) | planned |
+| A | Pinned reproducible build (`build.sh` + `Dockerfile`) | done |
+| B1 | FL-30 KB export + checksummed bundle (`tools/`, `kb/`) | **done** |
+| B2–B4 | The 9 knowledge modules (Java KMs) | **this repo, now** |
 | C | Translation shim (Node sidecar: locked JSON ↔ CDS Hooks R4) | planned |
 | D | Local A/B parity validation vs the in-process engine | planned |
 | E | Staging deploy (App Runner) + A4 validation | gated on FL-12 |
+
+## Phase B1 — the knowledge bundle
+
+`kb/` is a **committed, versioned release artifact** (`km_set = fl30-kb:v1`), exported from a
+clinician-signed `breath-ezy` datastore by `tools/export-fl30-kb.mjs`. It is committed rather
+than built at image-build time so the image builds reproducibly from this repo alone, and so a
+knowledge change must be a **deliberate re-export to a new `km_set`** rather than something that
+silently rides along.
+
+```bash
+# Re-export (read-only against a breath-ezy checkout). Requires Node 20+; no dependencies.
+node tools/export-fl30-kb.mjs --datastore ../breath-ezy [--dry-run]
+
+# The filter's contract tests — every gate below is proven here, including the aborts.
+node --test tools/*.test.mjs
+```
+
+**Four gates, in order — the allowlist runs FIRST, and sign-off is never sufficient:**
+
+1. **Allowlist (F5).** Only the 8 capabilities an `engine.js` accessor actually reads may become
+   executable. Everything else is excluded **regardless of attestation state** — `international-dose-guidance`
+   (US/EU labels) is excluded today only because it happens to be unsigned, and its own attestation
+   says clinical sign-off is not required. Australian-context is a hard limit; it does not get to
+   depend on an accident.
+2. **Sign-off.** Dataset-level `clinical_sign_off === true`. Necessary, never sufficient.
+3. **Provenance.** `records_checksum` re-computed with breath-ezy's own function — drift **aborts
+   the export**, because a broken seal means the clinician's signature no longer covers the bytes.
+4. **Per-record.** `provenance.review_status === "approved"`, which is authoritative over the
+   dataset flag.
+
+Every exclusion is recorded in `manifest.excluded[]` — a silent drop is indistinguishable from a bug.
+
+**Current bundle:** 8 capabilities · 1776 signed + approved records · 17 capabilities excluded.
+The identity sidecar (`index-identity.json`) is **empty** and `key_policy.rxcui_active` is **false**:
+the drug vocabulary is unsigned, so the checkout's own `identityCode()` returns null and the KB is
+name-keyed. An unsigned identity map may BLOCK, but it must never STEER.
 
 ## Phase A — build & run
 

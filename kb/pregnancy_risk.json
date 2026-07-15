@@ -1,0 +1,300 @@
+{
+  "km_set": "fl30-kb:v1",
+  "capability": "pregnancy_risk",
+  "dataset_version": "pharm-pregnancy-risk:v0.1.0-dev",
+  "records": [
+    {
+      "subject": "isotretinoin",
+      "subject_kind": "drug",
+      "tga_category": "X",
+      "guidance": "potent teratogen; pregnancy prevention program with effective contraception mandatory",
+      "contraindicated": true,
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "acitretin",
+      "subject_kind": "drug",
+      "tga_category": "X",
+      "guidance": "teratogen; pregnancy must be avoided for a prolonged period after cessation",
+      "contraindicated": true,
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "thalidomide",
+      "subject_kind": "drug",
+      "tga_category": "X",
+      "guidance": "severe teratogen; strict pregnancy prevention",
+      "contraindicated": true,
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "misoprostol",
+      "subject_kind": "drug",
+      "tga_category": "X",
+      "guidance": "abortifacient; contraindicated in pregnancy outside sanctioned obstetric use",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "warfarin",
+      "subject_kind": "drug",
+      "tga_category": "D",
+      "guidance": "embryopathy and fetal haemorrhage; avoid — recognised exception is selected mechanical-heart-valve patients under specialist care",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "sodium valproate",
+      "subject_kind": "drug",
+      "tga_category": "D",
+      "guidance": "high teratogenic and neurodevelopmental risk; avoid in women of childbearing potential unless no effective alternative, under specialist care",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "carbamazepine",
+      "subject_kind": "drug",
+      "tga_category": "D",
+      "guidance": "neural tube and other malformation risk",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "phenytoin",
+      "subject_kind": "drug",
+      "tga_category": "D",
+      "guidance": "fetal hydantoin syndrome risk",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "lithium",
+      "subject_kind": "drug",
+      "tga_category": "D",
+      "trimester_flags": [
+        "first"
+      ],
+      "guidance": "cardiac malformation (Ebstein anomaly) risk first trimester; specialist management",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "methotrexate",
+      "subject_kind": "drug",
+      "tga_category": "D",
+      "guidance": "abortifacient and teratogen; contraindicated for non-oncological use in pregnancy",
+      "contraindicated": true,
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "ACE inhibitors",
+      "subject_kind": "drug_class",
+      "tga_category": "D",
+      "trimester_flags": [
+        "second",
+        "third"
+      ],
+      "guidance": "fetal renal toxicity, oligohydramnios, skull hypoplasia; avoid throughout pregnancy",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "angiotensin receptor blockers",
+      "subject_kind": "drug_class",
+      "tga_category": "D",
+      "trimester_flags": [
+        "second",
+        "third"
+      ],
+      "guidance": "same fetotoxicity as ACE inhibitors; avoid throughout pregnancy",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "HMG-CoA reductase inhibitors (statins)",
+      "subject_kind": "drug_class",
+      "tga_category": "D",
+      "guidance": "avoid in pregnancy",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "tetracyclines",
+      "subject_kind": "drug_class",
+      "tga_category": "D",
+      "trimester_flags": [
+        "second",
+        "third"
+      ],
+      "guidance": "fetal dental staining and effects on bone; avoid from the second trimester",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "doxycycline",
+      "subject_kind": "drug",
+      "tga_category": "D",
+      "trimester_flags": [
+        "second",
+        "third"
+      ],
+      "guidance": "tetracycline-class effects on fetal teeth and bone",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "paracetamol",
+      "subject_kind": "drug",
+      "tga_category": "A",
+      "guidance": "considered safe at recommended use",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "amoxicillin",
+      "subject_kind": "drug",
+      "tga_category": "A",
+      "guidance": "considered safe in pregnancy",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    },
+    {
+      "subject": "folic acid",
+      "subject_kind": "drug",
+      "tga_category": "A",
+      "guidance": "recommended periconceptionally to reduce neural tube defect risk",
+      "provenance": {
+        "source": "TGA Prescribing Medicines in Pregnancy (facts, cited)",
+        "source_ref": "tga-pregnancy",
+        "authored_by": "claude-chat (TGA categories, cited)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    }
+  ]
+}

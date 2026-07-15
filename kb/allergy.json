@@ -1,0 +1,85 @@
+{
+  "km_set": "fl30-kb:v1",
+  "capability": "allergy",
+  "dataset_version": "pharm-allergy-xr:v0.1.0-dev",
+  "records": [
+    {
+      "group": "beta_lactam",
+      "members": [
+        "penicillin",
+        "amoxicillin",
+        "amoxicillin-clavulanate",
+        "flucloxacillin",
+        "cephalexin",
+        "cefalexin",
+        "ceftriaxone"
+      ],
+      "provenance": {
+        "source": "self-authored (cross-reactivity classes; primary literature)",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 (agent, draft; clinician authoring to confirm)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "group": "sulfonamide",
+      "members": [
+        "sulfamethoxazole",
+        "trimethoprim-sulfamethoxazole",
+        "sulfasalazine"
+      ],
+      "provenance": {
+        "source": "self-authored (cross-reactivity classes; primary literature)",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 (agent, draft; clinician authoring to confirm)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "group": "nsaid",
+      "members": [
+        "ibuprofen",
+        "naproxen",
+        "diclofenac",
+        "aspirin",
+        "celecoxib"
+      ],
+      "provenance": {
+        "source": "self-authored (cross-reactivity classes; primary literature)",
+        "source_ref": "self-authored",
+        "authored_by": "claude-fable-5 (agent, draft; clinician authoring to confirm)",
+        "reviewed_by": "KL",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-13"
+      }
+    },
+    {
+      "group": "aromatic_antiepileptic",
+      "members": [
+        "carbamazepine",
+        "oxcarbazepine",
+        "phenytoin",
+        "fosphenytoin",
+        "phenobarbital",
+        "primidone",
+        "lamotrigine"
+      ],
+      "provenance": {
+        "source": "self-authored (cross-reactivity classes; primary literature) — aromatic antiepileptic hypersensitivity",
+        "source_ref": "self-authored",
+        "authored_by": "claude-chat clinical review (draft; drives allergy_check/HARD_FAIL — KL to confirm membership)",
+        "reviewed_by": "Kenneth Lee",
+        "review_status": "approved",
+        "version": "v0.1.0",
+        "effective_date": "2026-07-14"
+      }
+    }
+  ]
+}
