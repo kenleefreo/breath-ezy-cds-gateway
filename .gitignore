@@ -1,5 +1,7 @@
 # OpenCDS source is CLONED at pinned commits by build.sh — never vendored here.
-src/
+# ANCHORED to the repo root: a bare `src/` matches a directory named `src` at ANY depth, which
+# silently swallowed `km/src/` — i.e. every line of our own KM source. Our code lives in km/src.
+/src/
 
 # Maven / build output
 target/
