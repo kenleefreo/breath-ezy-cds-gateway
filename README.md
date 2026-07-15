@@ -28,8 +28,8 @@ knowledge base — it never introduces new clinical knowledge. Deploying this im
 | A | Pinned reproducible build (`build.sh` + `Dockerfile`) | done |
 | B1 | FL-30 KB export + checksummed bundle (`tools/`, `kb/`) | **done** |
 | B2–B4 | The 9 knowledge modules (Java KMs) | **this repo, now** |
-| C | Translation shim (Node sidecar: locked JSON ↔ CDS Hooks R4) | planned |
-| D | Local A/B parity validation vs the in-process engine | planned |
+| C | Translation shim (Node sidecar: locked JSON ↔ CDS Hooks R4) | **done** — `shim/`, in this image |
+| D | Local A/B parity validation vs the in-process engine | **done** — breath-ezy `test/parity-opencds-gateway.js` (env-gated) |
 | E | Staging deploy (App Runner) + A4 validation | gated on FL-12 |
 
 ## Phase B1 — the knowledge bundle
