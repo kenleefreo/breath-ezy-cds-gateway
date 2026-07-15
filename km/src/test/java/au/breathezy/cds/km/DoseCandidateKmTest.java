@@ -110,8 +110,10 @@ class DoseCandidateKmTest {
 
     @Test
     void matching_is_name_based_while_the_identity_sidecar_is_UNSIGNED() {
-        // B0b: the code rides only from a signed source. Until then the NAME is the key — and B0 made
-        // that correct by canonicalising once, upstream, before both executors.
+        // B0b: the code rides only from a signed source. THIS BUNDLE was exported before the clinician
+        // signed the vocabulary (KL, 2026-07-15), so its sidecar is empty and the NAME is the key — and
+        // B0 made that correct by canonicalising once, upstream, before both executors. A re-export to
+        // fl30-kb:v2 is the deliberate step that would flip this; it has not been taken.
         assertFalse(kb.rxcuiActive());
         JsonObject withCode = drug(firstDoseRecord().get("ingredient").getAsString());
         withCode.addProperty("rxnorm_code", "4603");   // furosemide's real RxCUI

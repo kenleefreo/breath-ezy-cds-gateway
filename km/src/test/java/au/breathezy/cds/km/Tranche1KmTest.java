@@ -36,7 +36,12 @@ class Tranche1KmTest {
     @Test
     void the_real_bundle_verifies() {
         assertFalse(kb.failedClosed(), "the committed kb/ bundle must verify: " + kb.failureReason());
-        assertFalse(kb.rxcuiActive(), "the drug vocabulary is unsigned, so code-first matching must be OFF");
+        // The COMMITTED bundle was exported from an unsigned datastore, so it is name-keyed. That is a
+        // property of THIS BUNDLE, not of the datastore: KL signed the vocabulary on 2026-07-15, and a
+        // deliberate re-export to fl30-kb:v2 is what would turn code-first matching on here. Until that
+        // export happens, this bundle matches by name — and B0's upstream canonicalisation is what makes
+        // that correct.
+        assertFalse(kb.rxcuiActive(), "this bundle was exported before the vocabulary was signed, so code-first matching is OFF in it");
     }
 
     @Test
@@ -245,8 +250,10 @@ class Tranche1KmTest {
 
     @Test
     void an_unsigned_sidecar_cannot_steer_a_lookup() {
-        // The asymmetry, mechanically: an unsigned identity map may BLOCK but must never STEER.
-        assertNull(kb.canonicalNameForCode("4603"), "no code may resolve while the sidecar is unsigned");
+        // The asymmetry, mechanically: an unsigned identity map may BLOCK but must never STEER. This
+        // bundle's sidecar is empty (exported pre-sign-off), so nothing resolves through it — and the
+        // KM must still answer correctly on the name alone.
+        assertNull(kb.canonicalNameForCode("4603"), "no code may resolve while THIS BUNDLE's sidecar is unsigned");
         JsonObject withCode = drug("amoxicillin");
         withCode.addProperty("rxnorm_code", "723");
         CheckVerdict v = new AllergyCheckKm().check(kb, withCode, facts("{\"allergens\":[\"penicillin\"]}"));
