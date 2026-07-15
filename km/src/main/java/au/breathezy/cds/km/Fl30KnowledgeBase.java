@@ -44,7 +44,7 @@ import java.util.Map;
  * exists to prevent. The sidecar is empty while the drug vocabulary is unsigned, so today the name
  * is the key — and the pipeline canonicalises before both executors, which is what makes that safe.
  */
-public final class Fl30KnowledgeBase {
+public class Fl30KnowledgeBase {   // non-final ONLY so tests can stub an accessor; nothing overrides it in production
 
     /** The KM set this build answers to. A bundle stamped anything else is refused. */
     public static final String EXPECTED_KM_SET = "fl30-kb:v1";

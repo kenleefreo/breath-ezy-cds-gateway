@@ -126,4 +126,66 @@
         <userId>breath-ezy</userId>
     </knowledgeModule>
 
+    <!-- ══ Tranche 2 — schedule_8, pregnancy, hepatic (B3) ══ -->
+
+    <knowledgeModule>
+        <identifier scopingEntityId="au.breathezy.cds" businessId="fl30-schedule-8-check" version="1.0"/>
+        <status>DRAFT</status>
+        <cdsHook>
+            <hook>order-sign</hook>
+            <title>FL-30 Schedule 8 PDMP Check</title>
+            <description>Mirrors engine.js schedule_8_check against the 261-record signed SUSMP scheduling map. HARD_FAIL when an S8 (Controlled Drug) has no recorded SafeScript PDMP check. S8 is gated by EITHER the signed map OR the intent's declaration, so a map miss cannot suppress the check.</description>
+            <id>fl30-schedule-8-check</id>
+            <fhirVersion>R4</fhirVersion>
+        </cdsHook>
+        <executionEngine>CDS Hooks Adapter</executionEngine>
+        <semanticSignifierId scopingEntityId="org.hl7.fhir" businessId="cds-hooks-fhir-r4" version="1.0"/>
+        <package>
+            <packageType>CLASSPATH</packageType>
+            <packageId>au.breathezy.cds.km.Schedule8CheckKm</packageId>
+        </package>
+        <timestamp>2026-07-15T00:00:00.000+10:00</timestamp>
+        <userId>breath-ezy</userId>
+    </knowledgeModule>
+
+    <knowledgeModule>
+        <identifier scopingEntityId="au.breathezy.cds" businessId="fl30-pregnancy-check" version="1.0"/>
+        <status>DRAFT</status>
+        <cdsHook>
+            <hook>order-sign</hook>
+            <title>FL-30 TGA Pregnancy Category Check</title>
+            <description>Mirrors engine.js pregnancy_check against 18 signed TGA categorisations, including the D-FL05-1 age-gated fail-safe: an unknown pregnancy status blocks a known teratogen for a patient of childbearing potential (12-55, or age unknown), and does not block outside that window. Never emits a dose.</description>
+            <id>fl30-pregnancy-check</id>
+            <fhirVersion>R4</fhirVersion>
+        </cdsHook>
+        <executionEngine>CDS Hooks Adapter</executionEngine>
+        <semanticSignifierId scopingEntityId="org.hl7.fhir" businessId="cds-hooks-fhir-r4" version="1.0"/>
+        <package>
+            <packageType>CLASSPATH</packageType>
+            <packageId>au.breathezy.cds.km.PregnancyCheckKm</packageId>
+        </package>
+        <timestamp>2026-07-15T00:00:00.000+10:00</timestamp>
+        <userId>breath-ezy</userId>
+    </knowledgeModule>
+
+    <knowledgeModule>
+        <identifier scopingEntityId="au.breathezy.cds" businessId="fl30-hepatic-check" version="1.0"/>
+        <status>DRAFT</status>
+        <cdsHook>
+            <hook>order-sign</hook>
+            <title>FL-30 Hepatic Impairment Check</title>
+            <description>Mirrors engine.js hepatic_check against 13 signed qualitative hepatic rules. HARD_FAIL when contraindicated, WARN when adjustment is required, NOT_RUN when impairment status is absent.</description>
+            <id>fl30-hepatic-check</id>
+            <fhirVersion>R4</fhirVersion>
+        </cdsHook>
+        <executionEngine>CDS Hooks Adapter</executionEngine>
+        <semanticSignifierId scopingEntityId="org.hl7.fhir" businessId="cds-hooks-fhir-r4" version="1.0"/>
+        <package>
+            <packageType>CLASSPATH</packageType>
+            <packageId>au.breathezy.cds.km.HepaticCheckKm</packageId>
+        </package>
+        <timestamp>2026-07-15T00:00:00.000+10:00</timestamp>
+        <userId>breath-ezy</userId>
+    </knowledgeModule>
+
 </ns2:knowledgeModules>
