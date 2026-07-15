@@ -42,7 +42,11 @@ public final class AgeAppropriatenessCheckKm extends Fl30Km {
         if (age < 18) {
             return CheckVerdict.hardFail(checkId(),
                     "paediatric (<18): no paediatric dosing tables — in-person review required",
-                    "age_paediatric_weight_based");
+                    // engine.js's paediatric flag names NO drug: the finding is about the PATIENT, not the
+                    // medicine. Filling drug_a to make the shape uniform would assert something the engine
+                    // does not, and Phase D would see a divergence we invented.
+                    Flag.patient("age_paediatric_weight_based", CheckVerdict.Severity.critical,
+                            "Patient under 18 — paediatric dosing not available; in-person review required"));
         }
         return CheckVerdict.pass(checkId());
     }

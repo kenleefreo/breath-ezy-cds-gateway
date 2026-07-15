@@ -46,10 +46,31 @@ public final class InteractionCheckKm extends Fl30Km {
         }
         if (hits.isEmpty()) return CheckVerdict.pass(checkId());
 
+        // A FLAG PER HIT — engine.js: `hits.forEach((h, i) => flags.push({...}))` alongside ONE
+        // interaction_check. This is the whole reason a verdict carries a LIST: warfarin with amiodarone
+        // AND aspirin is one verdict and TWO findings, and the client filters flags[] to build the
+        // interaction list a clinician actually reads. Collapsing them would show ONE interaction where
+        // there are two — and Phase D would read our own modelling gap as knowledge divergence.
+        //
+        // Per-hit severity, not the check's: engine.js flags each hit at ITS OWN severity, so a moderate
+        // hit stays moderate on the card even when a critical sibling drives the verdict to HARD_FAIL.
+        // Rolling them up would overstate the moderate one — a flag is a finding, not a verdict.
+        List<Flag> flags = new ArrayList<>();
+        for (JsonObject ix : hits) {
+            boolean crit = "critical".equals(str(ix, "severity"));
+            String a = lower(str(ix, "subject"));
+            String b = lower(str(ix, "object"));
+            // engine.js description: `${a} + ${b}: ${note}` where note is the mechanism_class it maps in.
+            String note = str(ix, "mechanism_class");
+            flags.add(Flag.pair(crit ? "interaction_severe" : "interaction_moderate",
+                    crit ? CheckVerdict.Severity.critical : CheckVerdict.Severity.moderate,
+                    a + " + " + b + (note == null ? "" : ": " + note), a, b));
+        }
+
         boolean critical = hits.stream().anyMatch(h -> "critical".equals(str(h, "severity")));
         return critical
-                ? CheckVerdict.hardFail(checkId(), "interaction(s) detected", "interaction_severe")
-                : CheckVerdict.warn(checkId(), CheckVerdict.Severity.moderate, "interaction(s) detected", "interaction_moderate");
+                ? CheckVerdict.hardFail(checkId(), "interaction(s) detected", flags)
+                : CheckVerdict.warn(checkId(), CheckVerdict.Severity.moderate, "interaction(s) detected", flags);
     }
 
     private static String lower(String s) { return s == null ? null : s.toLowerCase(Locale.ROOT); }

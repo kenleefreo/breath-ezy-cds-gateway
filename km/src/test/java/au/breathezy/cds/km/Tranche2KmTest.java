@@ -34,7 +34,7 @@ class Tranche2KmTest {
         CheckVerdict v = new Schedule8CheckKm().check(kb, drug(s8), facts("{}"));
         assertEquals(CheckVerdict.Status.HARD_FAIL, v.status,
                 "for an S8 drug, 'no PDMP check performed' is not an unknown — it is the finding");
-        assertEquals("schedule_8_pdmp_required", v.flagType);
+        assertEquals("schedule_8_pdmp_required", v.flagType());
     }
 
     @Test
@@ -96,10 +96,10 @@ class Tranche2KmTest {
         String action = hepaticRecord(d).get("action").getAsString();
         if ("hepatic_contraindicated".equals(action)) {
             assertEquals(CheckVerdict.Status.HARD_FAIL, v.status);
-            assertEquals("hepatic_contraindicated", v.flagType);
+            assertEquals("hepatic_contraindicated", v.flagType());
         } else {
             assertEquals(CheckVerdict.Status.WARN, v.status);
-            assertEquals("hepatic_adjustment_required", v.flagType);
+            assertEquals("hepatic_adjustment_required", v.flagType());
         }
     }
 
@@ -164,7 +164,7 @@ class Tranche2KmTest {
         // pregnant patient regardless of how it is categorised.
         CheckVerdict v = new PregnancyCheckKm().check(new StubKb("B3", true), drug("x"), facts("{\"pregnancy_status\":\"pregnant\"}"));
         assertEquals(CheckVerdict.Status.HARD_FAIL, v.status);
-        assertEquals("pregnancy_category_x", v.flagType);
+        assertEquals("pregnancy_category_x", v.flagType());
     }
 
     @Test

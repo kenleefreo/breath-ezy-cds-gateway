@@ -48,14 +48,25 @@ import org.opencds.hooks.model.response.Indicator;
 public final class DoseCandidateKm extends Fl30Km {
 
     /**
-     * The frozen dose keys, mirroring engine.js's DOSE_KEYS pick. Copying the WHOLE record would drag
-     * provenance and attestation fields onto the wire, where the client's strict contract would
-     * reject them — and, worse, would put the clinician's signature block into a field that is
-     * explicitly advisory. Only the dose itself travels.
+     * The dose keys that may travel, mirroring engine.js's DOSE_KEYS pick — MINUS the two the locked
+     * wire contract forbids. Copying the WHOLE record would drag provenance and attestation fields onto
+     * the wire, where the client's strict contract would reject them — and, worse, would put the
+     * clinician's signature block into a field that is explicitly advisory. Only the dose itself travels.
+     *
+     * <h2>Why this is NARROWER than engine.js's list (F-C1)</h2>
+     * The engine legitimately emits {@code pbs_authority_required} and {@code pbs_item_code} — the FROZEN
+     * {@code pharm-check} allows them. The gateway's ADVISORY copy may not: {@code OpenCdsDoseCandidateSchema}
+     * is {@code .strict()} and has neither, so one PBS field on one dose record would fail
+     * {@code validateOpenCdsResponse} and black out EVERY check on that request with BLOCKED_NO_PROOF —
+     * fail-safe, and useless.
+     *
+     * Latent when written (0 of 451 records carry them) and live the moment PBS authority data is
+     * authored, which {@code pbs-formulary.json} exists to enable. The two contracts are different by
+     * design and this list follows the narrower one; it is not a copy of the engine's.
      */
     private static final String[] DOSE_KEYS = {
         "safe_dose_range", "adjustment_required", "adjustment_reason", "monitoring_required",
-        "duration_guidance", "pbs_authority_required", "pbs_item_code",
+        "duration_guidance",
     };
 
     @Override

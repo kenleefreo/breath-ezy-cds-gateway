@@ -63,7 +63,7 @@ class Tranche1KmTest {
         CheckVerdict v = new AllergyCheckKm().check(kb, drug("amoxicillin"), facts("{\"allergens\":[\"penicillin\"]}"));
         assertEquals(CheckVerdict.Status.HARD_FAIL, v.status);
         assertEquals(CheckVerdict.Severity.critical, v.severity);
-        assertEquals("allergy_cross_reactivity", v.flagType);
+        assertEquals("allergy_cross_reactivity", v.flagType());
         assertTrue(v.reason.contains("beta_lactam"));
     }
 
@@ -124,7 +124,7 @@ class Tranche1KmTest {
         CheckVerdict v = new InteractionCheckKm().check(kb, drug(crit.get("subject").getAsString()),
                 facts(GSON.toJson(medsOf(crit.get("object").getAsString()))));
         assertEquals(CheckVerdict.Status.HARD_FAIL, v.status);
-        assertEquals("interaction_severe", v.flagType);
+        assertEquals("interaction_severe", v.flagType());
 
         JsonObject mod = interactionWithSeverityNot("critical");
         if (mod != null) {
@@ -162,7 +162,7 @@ class Tranche1KmTest {
         CheckVerdict v = new RenalDosingCheckKm().check(kb, drug(rule.get("ingredient").getAsString()),
                 facts("{\"egfr_ml_min\":" + (t - 1) + "}"));
         assertEquals(CheckVerdict.Status.HARD_FAIL, v.status);
-        assertEquals("renal_contraindicated", v.flagType);
+        assertEquals("renal_contraindicated", v.flagType());
 
         CheckVerdict at = new RenalDosingCheckKm().check(kb, drug(rule.get("ingredient").getAsString()),
                 facts("{\"egfr_ml_min\":" + t + "}"));
@@ -181,7 +181,7 @@ class Tranche1KmTest {
         CheckVerdict v = new RenalDosingCheckKm().check(kb, drug(rule.get("ingredient").getAsString()),
                 facts("{\"egfr_ml_min\":" + (t - 1) + "}"));
         assertEquals(CheckVerdict.Status.WARN, v.status, "a dose-reduction rule below threshold must WARN, not PASS");
-        assertEquals("renal_adjustment_required", v.flagType);
+        assertEquals("renal_adjustment_required", v.flagType());
     }
 
     // ── nti_check ────────────────────────────────────────────────────────────────────────────────
@@ -192,7 +192,7 @@ class Tranche1KmTest {
         CheckVerdict v = new NtiCheckKm().check(kb, drug(rec.get("ingredient").getAsString()), facts("{}"));
         assertEquals(CheckVerdict.Status.HARD_FAIL, v.status,
                 "for an NTI drug, 'no monitoring plan documented' is not an unknown — it IS the finding");
-        assertEquals("nti", v.flagType);
+        assertEquals("nti", v.flagType());
     }
 
     @Test
@@ -229,7 +229,7 @@ class Tranche1KmTest {
     void age_paediatric_is_HARD_FAIL_with_a_flag_and_no_dose() {
         CheckVerdict v = new AgeAppropriatenessCheckKm().check(kb, drug("amoxicillin"), facts("{\"patient_age_years\":7}"));
         assertEquals(CheckVerdict.Status.HARD_FAIL, v.status);
-        assertEquals("age_paediatric_weight_based", v.flagType);
+        assertEquals("age_paediatric_weight_based", v.flagType());
         assertTrue(v.reason.contains("in-person review"));
     }
 
@@ -317,6 +317,92 @@ class Tranche1KmTest {
         assertTrue(detail.contains("identity conflict"), "the card must name the cause, not just refuse: " + detail);
         assertEquals(org.opencds.hooks.model.response.Indicator.WARNING, resp.getCards().get(0).getIndicator(),
                 "a check that could not run is an open question — INFO would read as reassurance");
+    }
+
+    // ── C1 · flags: the FINDINGS behind a verdict, one per hit ───────────────────────────────────
+
+    @Test
+    void an_interaction_check_emits_ONE_FLAG_PER_HIT_not_one_per_check() {
+        // THE DEFECT THIS FIXES. engine.js emits ONE interaction_check and a flag PER HIT. The KM used
+        // to carry a single flagType, collapsing N findings into 1 — and the client filters flags[] to
+        // build the interaction list a clinician READS. Warfarin + amiodarone + aspirin would have shown
+        // ONE interaction where there are two, and Phase D would have read our own modelling gap as a
+        // knowledge divergence between the executors.
+        var meds = new com.google.gson.JsonArray();
+        meds.add("amiodarone");
+        meds.add("aspirin");
+        JsonObject f = new JsonObject();
+        f.add("current_medications", meds);
+
+        CheckVerdict v = new InteractionCheckKm().check(kb, drug("warfarin"), f);
+        assertEquals(CheckVerdict.Status.HARD_FAIL, v.status);
+        assertEquals(2, v.flags.size(),
+                "two interacting medications must produce TWO flags — one finding each, exactly as engine.js does");
+
+        for (Flag fl : v.flags) {
+            assertNotNull(fl.drugA, "an interaction flag must name the first drug — the clinician cannot act on 'something interacts'");
+            assertNotNull(fl.drugB, "…and the second: an interaction has two parties");
+            assertTrue(fl.description.contains(fl.drugA) && fl.description.contains(fl.drugB),
+                    "the description must name both drugs, mirroring engine.js's `${a} + ${b}: ${note}`");
+        }
+        assertTrue(v.flags.stream().anyMatch(x -> "warfarin".equals(x.drugA) || "warfarin".equals(x.drugB)));
+    }
+
+    @Test
+    void a_flag_keeps_ITS_OWN_severity_not_the_checks() {
+        // engine.js flags each hit at its own severity. A moderate hit stays moderate on the card even
+        // when a critical sibling drives the verdict to HARD_FAIL — rolling them up would overstate the
+        // moderate one. A flag is a FINDING, not a verdict.
+        for (String d : new String[]{"warfarin", "amiodarone", "digoxin", "simvastatin", "methotrexate"}) {
+            var all = kb.getInteractions(d);
+            var sevs = all.stream().map(x -> x.get("severity").getAsString()).distinct().toList();
+            if (sevs.size() < 2) continue;   // need a drug with BOTH a critical and a non-critical partner
+            var meds = new com.google.gson.JsonArray();
+            for (JsonObject ix : all) {
+                String other = d.equals(ix.get("subject").getAsString().toLowerCase()) ? ix.get("object").getAsString() : ix.get("subject").getAsString();
+                meds.add(other.toLowerCase());
+            }
+            JsonObject f = new JsonObject();
+            f.add("current_medications", meds);
+            CheckVerdict v = new InteractionCheckKm().check(kb, drug(d), f);
+            assertTrue(v.flags.stream().anyMatch(x -> x.severity == CheckVerdict.Severity.critical),
+                    d + ": a critical hit must be flagged critical");
+            assertTrue(v.flags.stream().anyMatch(x -> x.severity == CheckVerdict.Severity.moderate),
+                    d + ": a moderate hit must STAY moderate even though a critical sibling drove the verdict");
+            return;
+        }
+        fail("fixture: no drug in the signed KB has both a critical and a non-critical interaction");
+    }
+
+    @Test
+    void the_paediatric_flag_names_NO_drug_because_the_engines_does_not() {
+        // engine.js's paed flag carries no drug_a: the finding is about the PATIENT, not the medicine.
+        // Filling the field to make the shape uniform would assert something the engine does not, and
+        // Phase D would see a divergence we invented.
+        CheckVerdict v = new AgeAppropriatenessCheckKm().check(kb, drug("amoxicillin"), facts("{\"patient_age_years\":7}"));
+        assertEquals(1, v.flags.size());
+        assertNull(v.flags.get(0).drugA, "the paediatric flag must name no drug — engine.js names none");
+        assertNull(v.flags.get(0).drugB);
+    }
+
+    @Test
+    void every_flag_carries_only_what_the_LOCKED_wire_allows() {
+        // OpenCdsFlagSchema is .strict(): flag_type, severity, description, drug_a?, drug_b?. The engine
+        // also carries renal_threshold and au_reference — those CANNOT ride, and the contract is locked.
+        // Proven at the CARD, which is what the shim actually maps.
+        var resp = new RenalDosingCheckKm().evaluate(
+                fakeRequest(drug(firstRenal("renal_contraindicated").get("ingredient").getAsString()), facts("{\"egfr_ml_min\":1}")), fakeCtx());
+        // Card.setExtension(Object) WRAPS the value in org.opencds.hooks.model.Extension, so getExtension()
+        // returns the wrapper, not what was put in. Unwrap via getValue(). Worth knowing before Phase C:
+        // the shim reads this same structure off the wire.
+        var ext = (com.google.gson.JsonObject) ((org.opencds.hooks.model.Extension) resp.getCards().get(0).getExtension()).getValue();
+        var flags = ext.getAsJsonObject("breathezy.verdict").getAsJsonArray("flags");
+        assertEquals(1, flags.size());
+        for (String k : flags.get(0).getAsJsonObject().keySet()) {
+            assertTrue(java.util.List.of("flag_type", "severity", "description", "drug_a", "drug_b").contains(k),
+                    "'" + k + "' is not on the locked flag contract and must not reach the wire — a forbidden field fails the WHOLE response");
+        }
+        assertFalse(flags.get(0).getAsJsonObject().has("renal_threshold"), "renal_threshold cannot ride the locked flag schema");
     }
 
     // ── the real CDS Hooks plumbing — no mocks ───────────────────────────────────────────────────

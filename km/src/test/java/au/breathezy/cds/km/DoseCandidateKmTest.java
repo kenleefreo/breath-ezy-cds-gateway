@@ -53,6 +53,31 @@ class DoseCandidateKmTest {
     }
 
     @Test
+    void the_PBS_keys_never_travel_even_when_the_record_carries_them() {
+        // F-C1. OpenCdsDoseCandidateSchema is .strict() and has NO pbs_authority_required / pbs_item_code.
+        // The ENGINE emits both legitimately (the frozen pharm-check allows them) — the gateway's ADVISORY
+        // copy may not. One PBS field on one record would fail validateOpenCdsResponse and black out EVERY
+        // check on that request with BLOCKED_NO_PROOF: fail-safe, and useless.
+        //
+        // Latent when written (0 of 451 records carry them) and live the moment PBS authority data is
+        // authored, which pbs-formulary.json exists to enable. So it is FORCED here rather than waited for.
+        Fl30KnowledgeBase forced = new Fl30KnowledgeBase(Fl30KnowledgeBase.class.getClassLoader()) {
+            @Override public JsonObject getDoseGuidance(String drug) {
+                JsonObject r = new JsonObject();
+                r.addProperty("safe_dose_range", "10 mg daily");
+                r.addProperty("pbs_authority_required", true);   // ← the wire forbids this
+                r.addProperty("pbs_item_code", "1234K");         // ← and this
+                return r;
+            }
+        };
+        JsonObject dose = km.doseCandidate(forced, drug("anything"), adult());
+        assertNotNull(dose);
+        assertEquals("10 mg daily", dose.get("safe_dose_range").getAsString(), "the dose itself must still travel");
+        assertFalse(dose.has("pbs_authority_required"), "pbs_authority_required is not on the locked wire contract — carrying it fails the WHOLE response");
+        assertFalse(dose.has("pbs_item_code"), "pbs_item_code is not on the locked wire contract");
+    }
+
+    @Test
     void all_451_signed_records_yield_a_dose_for_an_adult() {
         // The whole point of F3's flip: the source EXISTS. If this KM could only answer for a handful
         // of drugs it would not be worth the Java.
