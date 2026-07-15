@@ -67,8 +67,20 @@ import { execFileSync } from "node:child_process";
  * `cds-adapter/opencds-client.js` — the client cross-checks it on every response, so a mismatch means
  * the gateway is executing knowledge the client did not ask for. Bumped only by a deliberate
  * re-export (D-B-1); the checked-in value is asserted by the test suite.
+ *
+ * ══ v1 → v2 (2026-07-15): the identity sidecar went live ══
+ * v1 was exported while the drug vocabulary was UNSIGNED, so `identityCode()` returned null for every
+ * drug: the sidecar was empty, `rxcui_active` was false, and the KB matched by name. KL signed the
+ * vocabulary on 2026-07-15 and the same export now yields 522 codes.
+ *
+ * That is a KNOWLEDGE CHANGE — it changes how a KM resolves which drug a request is about — so it
+ * gets a new km_set rather than silently riding along inside v1. The bump is the point: the client
+ * cross-checks the version on every response, so a gateway still serving v1 to a v2 client
+ * BLOCKS (BLOCKED_NO_PROOF) instead of quietly answering from knowledge nobody asked for. Both
+ * directions of the transition fail safe, which is why this can be bumped before any gateway is
+ * deployed.
  */
-export const KM_SET = "fl30-kb:v1";
+export const KM_SET = "fl30-kb:v2";
 
 /**
  * F5 — the capability allowlist. Exactly the 8 capabilities backed by an `engine.js` accessor, i.e.

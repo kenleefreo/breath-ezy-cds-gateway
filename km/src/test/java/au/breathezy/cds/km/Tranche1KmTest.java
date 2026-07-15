@@ -36,12 +36,12 @@ class Tranche1KmTest {
     @Test
     void the_real_bundle_verifies() {
         assertFalse(kb.failedClosed(), "the committed kb/ bundle must verify: " + kb.failureReason());
-        // The COMMITTED bundle was exported from an unsigned datastore, so it is name-keyed. That is a
-        // property of THIS BUNDLE, not of the datastore: KL signed the vocabulary on 2026-07-15, and a
-        // deliberate re-export to fl30-kb:v2 is what would turn code-first matching on here. Until that
-        // export happens, this bundle matches by name — and B0's upstream canonicalisation is what makes
-        // that correct.
-        assertFalse(kb.rxcuiActive(), "this bundle was exported before the vocabulary was signed, so code-first matching is OFF in it");
+        // fl30-kb:v2 — exported after KL signed the vocabulary (2026-07-15), so the identity sidecar is
+        // populated and code-first matching is live. v1 was name-keyed. Different knowledge, different
+        // version: the client cross-checks it, so a gateway still serving v1 BLOCKS rather than quietly
+        // answering from a knowledge set nobody asked for.
+        assertTrue(kb.rxcuiActive(), "v2 carries a signed identity sidecar, so code-first matching is ON");
+        assertEquals("fl30-kb:v2", Fl30KnowledgeBase.EXPECTED_KM_SET);
     }
 
     @Test
@@ -249,16 +249,96 @@ class Tranche1KmTest {
     // ── identity ─────────────────────────────────────────────────────────────────────────────────
 
     @Test
-    void an_unsigned_sidecar_cannot_steer_a_lookup() {
-        // The asymmetry, mechanically: an unsigned identity map may BLOCK but must never STEER. This
-        // bundle's sidecar is empty (exported pre-sign-off), so nothing resolves through it — and the
-        // KM must still answer correctly on the name alone.
-        assertNull(kb.canonicalNameForCode("4603"), "no code may resolve while THIS BUNDLE's sidecar is unsigned");
-        JsonObject withCode = drug("amoxicillin");
-        withCode.addProperty("rxnorm_code", "723");
-        CheckVerdict v = new AllergyCheckKm().check(kb, withCode, facts("{\"allergens\":[\"penicillin\"]}"));
-        assertEquals(CheckVerdict.Status.HARD_FAIL, v.status,
-                "with the sidecar unsigned the NAME is the key, and the pipeline already canonicalised it (B0)");
+    void a_CODE_now_resolves_to_the_right_record() {
+        // What v2 bought. The sign-off populated the sidecar, so a code the pipeline settled upstream
+        // resolves here — a key-match, never a canonicalisation. The gateway must not resolve identity
+        // itself: a second, divergent canonicaliser is the E6 defect with extra steps.
+        assertEquals("furosemide", kb.canonicalNameForCode("4603"), "RxCUI 4603 must resolve to furosemide");
+
+        // metformin, not furosemide: furosemide carries no renal rule, so it could not prove a code
+        // REACHED anything. Pick a drug that actually holds the knowledge the assertion is about.
+        assertEquals("metformin", kb.canonicalNameForCode("6809"));
+        JsonObject byCode = new JsonObject();
+        byCode.addProperty("drug_name", "metformin");
+        byCode.addProperty("rxnorm_code", "6809");
+        assertNotNull(kb.getRenalRule(Fl30Km.drugKey(kb, byCode)), "the code must reach metformin's signed renal rule");
+
+        // …and it must reach the SAME record the name reaches. Code-first matching is only worth having
+        // if the two agree; if they could diverge, the code would be a second identity, not a key.
+        assertEquals(kb.getRenalRule("metformin"), kb.getRenalRule(Fl30Km.drugKey(kb, byCode)),
+                "the code and the name must reach the SAME signed record — the code is a KEY, not a second opinion");
+    }
+
+    @Test
+    void a_drug_with_NO_code_still_resolves_by_NAME() {
+        // 415 of the KB's subjects have no RxCUI — combination products and classes RxNorm models as
+        // multi-ingredient concepts. They carry real signed knowledge, which is exactly why a code-ONLY
+        // contract fails and the name must still ride.
+        JsonObject nameOnly = drug("amoxicillin");   // no rxnorm_code at all
+        CheckVerdict v = new AllergyCheckKm().check(kb, nameOnly, facts("{\"allergens\":[\"penicillin\"]}"));
+        assertEquals(CheckVerdict.Status.HARD_FAIL, v.status, "the name path must keep working — B0 canonicalises upstream, which is what makes it correct");
+    }
+
+    @Test
+    void a_code_this_KB_does_not_hold_falls_back_to_the_NAME() {
+        JsonObject unknownCode = drug("amoxicillin");
+        unknownCode.addProperty("rxnorm_code", "999999");   // not in the sidecar
+        CheckVerdict v = new AllergyCheckKm().check(kb, unknownCode, facts("{\"allergens\":[\"penicillin\"]}"));
+        assertEquals(CheckVerdict.Status.HARD_FAIL, v.status, "an unknown code must not break the name path — it simply resolves nothing");
+    }
+
+    @Test
+    void a_code_that_CONTRADICTS_the_name_must_REFUSE_to_pick_a_winner() {
+        // THE HAZARD v2 ACTIVATES. Until the sidecar was populated, drugKey's code branch was dead, so
+        // the resolution order never mattered. Now it does: a code and a name that disagree mean
+        // something upstream is broken, and letting the code win silently would check the code's drug
+        // while the record, the card and the clinician's screen all say the name's — a wrong-drug check
+        // that looks entirely normal.
+        //
+        // Today the pipeline sets both from ONE canonicaliseDrugName() call so they cannot disagree.
+        // That is a property of the current caller, not of the contract. An accident is not a safeguard.
+        JsonObject conflict = drug("amoxicillin");
+        conflict.addProperty("rxnorm_code", "4603");   // furosemide's code, amoxicillin's name
+        assertThrows(IllegalStateException.class, () -> new AllergyCheckKm().check(kb, conflict, facts("{\"allergens\":[\"penicillin\"]}")),
+                "a code/name conflict must REFUSE — this KM cannot know which of the two is wrong, so it must not choose");
+    }
+
+    @Test
+    void an_identity_conflict_degrades_to_NOT_RUN_never_a_PASS() {
+        // The throw above is only safe because the base turns it into NOT_RUN (→ BLOCKED_NO_PROOF).
+        // Returning null instead would be far worse: the accessors would find no records and every
+        // check would report a placid PASS. Proven through the real evaluate() path.
+        JsonObject conflict = drug("amoxicillin");
+        conflict.addProperty("rxnorm_code", "4603");
+        var resp = new AllergyCheckKm().evaluate(
+                fakeRequest(conflict, facts("{\"allergens\":[\"penicillin\"]}")), fakeCtx());
+        assertEquals(1, resp.getCards().size());
+        String detail = resp.getCards().get(0).getDetail();
+        assertTrue(detail.contains("identity conflict"), "the card must name the cause, not just refuse: " + detail);
+        assertEquals(org.opencds.hooks.model.response.Indicator.WARNING, resp.getCards().get(0).getIndicator(),
+                "a check that could not run is an open question — INFO would read as reassurance");
+    }
+
+    // ── the real CDS Hooks plumbing — no mocks ───────────────────────────────────────────────────
+    // WritableCdsRequest / WritableHookContext are OpenCDS's own concrete types, so evaluate() is
+    // exercised through the same objects the engine builds at runtime rather than a stand-in that
+    // could drift from it.
+
+    private static org.opencds.hooks.model.request.CdsRequest fakeRequest(JsonObject drug, JsonObject facts) {
+        var ctx = new org.opencds.hooks.model.context.WritableHookContext();
+        ctx.add("drug", drug);
+        ctx.add("resolved_facts", facts);
+        var req = new org.opencds.hooks.model.request.WritableCdsRequest();
+        req.setHook("order-sign");
+        req.setHookInstance("test");
+        req.setContext(ctx);
+        return req;
+    }
+
+    private static org.opencds.hooks.engine.api.CdsHooksEvaluationContext fakeCtx() {
+        return org.opencds.hooks.engine.api.CdsHooksEvaluationContext.create(
+                new java.util.Date(0), java.net.URI.create("http://localhost/opencds"), "en", "+10:00",
+                java.util.Map.of(), java.util.Map.of(), java.util.Map.of());
     }
 
     // ── fixtures pulled from the real bundle ─────────────────────────────────────────────────────

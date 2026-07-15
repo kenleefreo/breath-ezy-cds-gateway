@@ -46,8 +46,15 @@ import java.util.Map;
  */
 public class Fl30KnowledgeBase {   // non-final ONLY so tests can stub an accessor; nothing overrides it in production
 
-    /** The KM set this build answers to. A bundle stamped anything else is refused. */
-    public static final String EXPECTED_KM_SET = "fl30-kb:v1";
+    /**
+     * The KM set this build answers to. A bundle stamped anything else is REFUSED — executing
+     * knowledge the client did not ask for is not a recoverable condition.
+     *
+     * <p>v2 (2026-07-15): the identity sidecar is populated (522 codes) because the drug vocabulary
+     * was signed. v1 was name-keyed. Both are internally consistent; they are different knowledge,
+     * so they are different versions.
+     */
+    public static final String EXPECTED_KM_SET = "fl30-kb:v2";
 
     private static final Gson GSON = new Gson();
     private static volatile Fl30KnowledgeBase instance;

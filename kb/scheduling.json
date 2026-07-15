@@ -1,5 +1,5 @@
 {
-  "km_set": "fl30-kb:v1",
+  "km_set": "fl30-kb:v2",
   "capability": "scheduling",
   "dataset_version": "pharm-au-scheduling:v0.1.0-dev",
   "records": [

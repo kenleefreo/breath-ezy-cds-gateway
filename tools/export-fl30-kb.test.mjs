@@ -94,14 +94,23 @@ test("(c) provenance drift ABORTS the export — it does not skip the dataset", 
 
 // ── (d) the km_set is pinned ──────────────────────────────────────────────────────────────────────
 test("(d) km_set is pinned to the client's DEFAULT_KM_SET", () => {
-  // Must equal DEFAULT_KM_SET in breath-ezy cds-adapter/opencds-client.js. The client cross-checks it
-  // on every response, so a drift here means the gateway executes knowledge the client did not ask for.
-  assert.equal(KM_SET, "fl30-kb:v1");
+  // Must equal DEFAULT_KM_SET in breath-ezy cds-adapter/opencds-client.js AND
+  // Fl30KnowledgeBase.EXPECTED_KM_SET. The client cross-checks it on every response, so a drift means
+  // the gateway executes knowledge the client did not ask for.
+  //
+  // THIS LITERAL IS DELIBERATE, unlike the ones removed from breath-ezy's suites. Those hardcoded the
+  // version while testing something else, so a bump broke them for no safety reason. Here the version
+  // IS the subject: this is the cross-repo pin, and the whole point is that it cannot move by
+  // accident. A bump must be a deliberate edit in all three places, and this is one of them.
+  //
+  // v2 (2026-07-15): the vocabulary was signed, so the identity sidecar carries 522 codes. v1 was
+  // name-keyed. Different knowledge → different version.
+  assert.equal(KM_SET, "fl30-kb:v2");
   const { manifest, files } = buildBundle(fixture());
-  assert.equal(manifest.km_set, "fl30-kb:v1");
+  assert.equal(manifest.km_set, KM_SET);
   for (const [name, body] of Object.entries(files)) {
     if (name === "manifest.json") continue;
-    assert.equal(JSON.parse(body).km_set, "fl30-kb:v1", `${name} must carry the km_set it answers to`);
+    assert.equal(JSON.parse(body).km_set, KM_SET, `${name} must carry the km_set it answers to`);
   }
 });
 

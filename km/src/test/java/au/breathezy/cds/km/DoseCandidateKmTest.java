@@ -109,28 +109,65 @@ class DoseCandidateKmTest {
     // ── identity ─────────────────────────────────────────────────────────────────────────────────
 
     @Test
-    void matching_is_name_based_while_the_identity_sidecar_is_UNSIGNED() {
-        // B0b: the code rides only from a signed source. THIS BUNDLE was exported before the clinician
-        // signed the vocabulary (KL, 2026-07-15), so its sidecar is empty and the NAME is the key — and
-        // B0 made that correct by canonicalising once, upstream, before both executors. A re-export to
-        // fl30-kb:v2 is the deliberate step that would flip this; it has not been taken.
-        assertFalse(kb.rxcuiActive());
-        JsonObject withCode = drug(firstDoseRecord().get("ingredient").getAsString());
-        withCode.addProperty("rxnorm_code", "4603");   // furosemide's real RxCUI
-        assertNotNull(km.doseCandidate(kb, withCode, adult()),
-                "an unsigned sidecar must not break the name path — it must simply not steer");
+    void a_SIGNED_code_reaches_the_same_dose_the_name_does() {
+        // B0b, live in fl30-kb:v2. The code is a KEY the pipeline already settled — never a second
+        // identity. If code and name could reach DIFFERENT doses, the code would be a second opinion
+        // about which drug this is, which is exactly what the single upstream identity boundary exists
+        // to prevent.
+        assertTrue(kb.rxcuiActive(), "v2 carries a signed sidecar");
+        assertEquals("furosemide", kb.canonicalNameForCode("4603"));
+
+        JsonObject byName = drug("levothyroxine");
+        JsonObject byCode = drug("levothyroxine");
+        byCode.addProperty("rxnorm_code", "10582");
+        JsonObject a = km.doseCandidate(kb, byName, adult());
+        JsonObject b = km.doseCandidate(kb, byCode, adult());
+        assertNotNull(a, "fixture: levothyroxine carries a signed dose");
+        assertEquals(a, b, "the code and the name must reach the SAME signed dose — the code is a key, not a second opinion");
     }
 
     @Test
-    void an_unsigned_code_can_never_redirect_a_dose_lookup() {
-        // The asymmetry, at its sharpest. Steering a DOSE on an unverified identity would dose the
-        // wrong drug. So while unsigned, a code resolves nothing at all.
-        assertNull(kb.canonicalNameForCode("4603"));
-        JsonObject wrongCode = drug(firstDoseRecord().get("ingredient").getAsString());
-        wrongCode.addProperty("rxnorm_code", "999999");   // a code for something else entirely
-        JsonObject dose = km.doseCandidate(kb, wrongCode, adult());
+    void a_code_this_KB_does_not_hold_falls_back_to_the_NAME_and_never_redirects() {
+        // An unknown code resolves NOTHING — it must not silently redirect, and it must not break the
+        // name path either. Steering a DOSE on an unverified identity would dose the wrong drug.
+        assertNull(kb.canonicalNameForCode("999999"), "a code the sidecar does not hold must resolve to nothing");
+        JsonObject unknownCode = drug(firstDoseRecord().get("ingredient").getAsString());
+        unknownCode.addProperty("rxnorm_code", "999999");
+        JsonObject dose = km.doseCandidate(kb, unknownCode, adult());
         assertEquals(firstDoseRecord().get("safe_dose_range").getAsString(), dose.get("safe_dose_range").getAsString(),
-                "a bogus code must not redirect the lookup — the canonical NAME governs while the sidecar is unsigned");
+                "an unknown code must leave the canonical NAME governing — B0 canonicalised it upstream");
+    }
+
+    @Test
+    void a_code_that_CONTRADICTS_the_name_yields_NO_DOSE() {
+        // The sharpest form of the hazard v2 activates. A code and a name that disagree mean something
+        // upstream is broken; picking a winner would dose the drug the OTHER field named. The KM
+        // refuses, and DoseCandidateKm.evaluate turns any throw into no dose at all.
+        JsonObject conflict = drug("levothyroxine");
+        conflict.addProperty("rxnorm_code", "4603");   // furosemide's code on levothyroxine's name
+        assertThrows(IllegalStateException.class, () -> km.doseCandidate(kb, conflict, adult()),
+                "a code/name conflict must refuse — a dose is the last place to guess which field is right");
+
+        var resp = km.evaluate(fakeRequest(conflict, adult()), fakeCtx());
+        assertEquals(0, resp.getCards().size(),
+                "through evaluate(), a conflict must emit NO dose card at all — silence here is safe, because a missing dose_candidate simply means the client has none to render");
+    }
+
+    private static org.opencds.hooks.model.request.CdsRequest fakeRequest(JsonObject drug, JsonObject facts) {
+        var ctx = new org.opencds.hooks.model.context.WritableHookContext();
+        ctx.add("drug", drug);
+        ctx.add("resolved_facts", facts);
+        var req = new org.opencds.hooks.model.request.WritableCdsRequest();
+        req.setHook("order-sign");
+        req.setHookInstance("test");
+        req.setContext(ctx);
+        return req;
+    }
+
+    private static org.opencds.hooks.engine.api.CdsHooksEvaluationContext fakeCtx() {
+        return org.opencds.hooks.engine.api.CdsHooksEvaluationContext.create(
+                new java.util.Date(0), java.net.URI.create("http://localhost/opencds"), "en", "+10:00",
+                java.util.Map.of(), java.util.Map.of(), java.util.Map.of());
     }
 
     // ── containment ──────────────────────────────────────────────────────────────────────────────

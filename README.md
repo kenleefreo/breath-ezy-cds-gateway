@@ -34,7 +34,7 @@ knowledge base — it never introduces new clinical knowledge. Deploying this im
 
 ## Phase B1 — the knowledge bundle
 
-`kb/` is a **committed, versioned release artifact** (`km_set = fl30-kb:v1`), exported from a
+`kb/` is a **committed, versioned release artifact** (`km_set = fl30-kb:v2`), exported from a
 clinician-signed `breath-ezy` datastore by `tools/export-fl30-kb.mjs`. It is committed rather
 than built at image-build time so the image builds reproducibly from this repo alone, and so a
 knowledge change must be a **deliberate re-export to a new `km_set`** rather than something that
@@ -63,10 +63,38 @@ node --test tools/*.test.mjs
 
 Every exclusion is recorded in `manifest.excluded[]` — a silent drop is indistinguishable from a bug.
 
-**Current bundle:** 8 capabilities · 1776 signed + approved records · 17 capabilities excluded.
-The identity sidecar (`index-identity.json`) is **empty** and `key_policy.rxcui_active` is **false**:
-the drug vocabulary is unsigned, so the checkout's own `identityCode()` returns null and the KB is
-name-keyed. An unsigned identity map may BLOCK, but it must never STEER.
+**Current bundle (`fl30-kb:v2`):** 8 capabilities · 1776 signed + approved records · 17 capabilities
+excluded · identity sidecar **522 codes**, `rxcui_active: true` · 415 name-only subjects.
+
+### v1 → v2 (2026-07-15) — why the version moved
+
+v1 was exported while the drug vocabulary was **unsigned**, so the checkout's own `identityCode()`
+returned null for every drug: the sidecar was empty and the KB matched by name. A clinician signed
+the vocabulary, and the same export now yields 522 codes.
+
+That changes **how a KM resolves which drug a request is about** — a knowledge change — so it gets a
+new `km_set` rather than silently riding along inside v1. The version is what makes the transition
+safe: the client cross-checks it on every response, so a gateway still serving v1 to a v2 client (or
+the reverse) returns **`BLOCKED_NO_PROOF`** instead of answering from a knowledge set nobody asked
+for. **Both directions fail safe**, which is why the bump is safe to make before any gateway is
+deployed. Bumping means editing all three pins deliberately:
+
+| Pin | Where |
+|---|---|
+| `KM_SET` | `tools/export-fl30-kb.mjs` |
+| `EXPECTED_KM_SET` | `km/…/Fl30KnowledgeBase.java` |
+| `DEFAULT_KM_SET` | `breath-ezy` `cds-adapter/opencds-client.js` |
+
+The 415 name-only subjects are not a gap to close: they are combination products
+(`trimethoprim with sulfamethoxazole`) and classes (`oestrogens`, `ferrous salts`) that RxNorm models
+as multi-ingredient concepts a single-name lookup does not resolve. They carry real signed knowledge —
+which is exactly why a **code-only** contract would fail and the name must still ride.
+
+**The code is a key, not a second identity.** The KM resolves a code the pipeline already settled;
+it never canonicalises a name itself (a second, divergent canonicaliser is the defect the single
+upstream identity boundary exists to prevent). And if a code and a name **disagree**, the KM
+**refuses** — it cannot know which of the two is wrong, so a check degrades to `NOT_RUN` and the dose
+KM emits nothing.
 
 ## Phase A — build & run
 

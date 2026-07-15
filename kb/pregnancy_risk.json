@@ -1,5 +1,5 @@
 {
-  "km_set": "fl30-kb:v1",
+  "km_set": "fl30-kb:v2",
   "capability": "pregnancy_risk",
   "dataset_version": "pharm-pregnancy-risk:v0.1.0-dev",
   "records": [

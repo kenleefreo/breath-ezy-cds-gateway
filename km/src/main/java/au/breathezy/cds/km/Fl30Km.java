@@ -166,9 +166,33 @@ public abstract class Fl30Km implements CdsHooksExecutionEngine {
      * the pipeline already settled (B0). Never a canonicalisation performed here.
      */
     protected static String drugKey(Fl30KnowledgeBase kb, JsonObject drug) {
-        String byCode = kb.canonicalNameForCode(str(drug, "rxnorm_code"));
-        if (byCode != null) return byCode;
         String name = str(drug, "drug_name");
-        return name == null ? null : name.toLowerCase(java.util.Locale.ROOT);
+        String lower = name == null ? null : name.toLowerCase(java.util.Locale.ROOT);
+        String byCode = kb.canonicalNameForCode(str(drug, "rxnorm_code"));
+        if (byCode == null) return lower;   // no code, or a code this KB does not hold -> the NAME governs
+
+        // BOTH resolve. If they disagree, SOMETHING UPSTREAM IS BROKEN — and this KM must not pick a
+        // winner. Letting the code win silently would check the code's drug while the record, the card
+        // and the clinician's screen all say the name's: a wrong-drug check that looks entirely normal.
+        //
+        // This branch was DEAD until fl30-kb:v2. With an empty sidecar `byCode` was always null, so the
+        // resolution order never mattered. Turning code-first matching on is what makes it live, which
+        // is exactly when to decide it rather than inherit it.
+        //
+        // Today the pipeline sets drug_name and rxnorm_code from ONE canonicaliseDrugName() call, so
+        // they cannot disagree. That is a property of the current caller, not a guarantee of the
+        // contract — the wire contract lets any client populate both fields independently. An accident
+        // is not a safeguard.
+        //
+        // Throwing is the fail-safe: Fl30Km.evaluate turns it into NOT_RUN (-> BLOCKED_NO_PROOF
+        // upstream) and DoseCandidateKm emits no dose. Returning null would be far worse — the
+        // accessors would find no records and every check would report a placid PASS.
+        if (lower != null && !byCode.equals(lower)) {
+            throw new IllegalStateException(
+                    "identity conflict: rxnorm_code " + str(drug, "rxnorm_code") + " resolves to '" + byCode
+                            + "' but drug_name says '" + lower + "'. Refusing to choose between them — "
+                            + "one of the two is wrong and this KM cannot know which.");
+        }
+        return byCode;
     }
 }

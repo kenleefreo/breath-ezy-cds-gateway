@@ -1,5 +1,5 @@
 {
-  "km_set": "fl30-kb:v1",
+  "km_set": "fl30-kb:v2",
   "capability": "renal",
   "dataset_version": "pharm-renal-rules:v0.1.0-dev",
   "records": [

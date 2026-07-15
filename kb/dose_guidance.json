@@ -1,5 +1,5 @@
 {
-  "km_set": "fl30-kb:v1",
+  "km_set": "fl30-kb:v2",
   "capability": "dose_guidance",
   "dataset_version": "pharm-dose-guidance:v0.1.0-dev",
   "records": [
