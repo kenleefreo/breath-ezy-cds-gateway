@@ -188,4 +188,32 @@
         <userId>breath-ezy</userId>
     </knowledgeModule>
 
+    <!-- ══ Tranche 3 — the dose KM (B4) ══
+         The ONLY module that emits a dose, and it is ADVISORY. It executes the SAME 451
+         clinician-attested AU records the in-process engine does, so agreement CORROBORATES and
+         divergence is a defect signal in one of the two executors — which is exactly what Phase D's
+         A/B parity measures, and dosing is the highest-stakes thing the gateway would execute.
+         It is never PharmCheck.dose_guidance: the client drops dose_candidate unless the composed
+         verdict is PASS/WARN, and assertNoAdvisoryInDose() throws if it ever lands on the AU dose. -->
+
+    <knowledgeModule>
+        <identifier scopingEntityId="au.breathezy.cds" businessId="fl30-dose-candidate" version="1.0"/>
+        <status>DRAFT</status>
+        <cdsHook>
+            <hook>order-sign</hook>
+            <title>FL-30 Advisory AU Dose Candidate</title>
+            <description>Emits an ADVISORY dose_candidate from the 451 clinician-attested AU dose records — a second independent executor's reading of the same signed knowledge, rendered beside the authoritative AU dose, never replacing it. Refuses on paediatric or unknown age; a drug with no signed dose yields none, never a substitute.</description>
+            <id>fl30-dose-candidate</id>
+            <fhirVersion>R4</fhirVersion>
+        </cdsHook>
+        <executionEngine>CDS Hooks Adapter</executionEngine>
+        <semanticSignifierId scopingEntityId="org.hl7.fhir" businessId="cds-hooks-fhir-r4" version="1.0"/>
+        <package>
+            <packageType>CLASSPATH</packageType>
+            <packageId>au.breathezy.cds.km.DoseCandidateKm</packageId>
+        </package>
+        <timestamp>2026-07-15T00:00:00.000+10:00</timestamp>
+        <userId>breath-ezy</userId>
+    </knowledgeModule>
+
 </ns2:knowledgeModules>
