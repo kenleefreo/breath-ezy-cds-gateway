@@ -30,7 +30,7 @@ knowledge base — it never introduces new clinical knowledge. Deploying this im
 | B2–B4 | The 9 knowledge modules (Java KMs) | **this repo, now** |
 | C | Translation shim (Node sidecar: locked JSON ↔ CDS Hooks R4) | **done** — `shim/`, in this image |
 | D | Local A/B parity validation vs the in-process engine | **done** — breath-ezy `test/parity-opencds-gateway.js` (env-gated) |
-| E | Staging deploy (App Runner) + A4 validation | gated on FL-12 |
+| E | Staging deploy (App Runner) + A4 validation | **done** — 2026-07-16, see Phase E below |
 
 ## Phase B1 — the knowledge bundle
 
@@ -125,6 +125,32 @@ curl -X POST http://localhost:8080/opencds/r4/hooks/cds-services/example-knowled
 Two endpoint quirks confirmed on the 2026-07-14 proof-of-deploy and baked into the client:
 the CDS-Hooks path is `/<context>/r4/hooks/cds-services`, and prefetch values are **bare
 FHIR resources** (not wrapped in a `{response,resource}` envelope).
+
+## Phase E — staging deploy (App Runner) + A4 validation
+
+**A4 PASSED 2026-07-16** against the deployed service: breath-ezy's env-gated smoke OK and
+A/B parity **902/902** (451 ingredients × 2 fact profiles, all 8 checks) — the deployed
+gateway and the in-process engine agree on every status, per-check verdict, finding and
+dose text, live over the wire.
+
+**Deploy shape (staging, ap-southeast-2):** one App Runner service from the ECR image —
+public port **8081** (the shim; Tomcat's 8080 stays internal), health check `/healthz`,
+**2 vCPU / 4 GB** (a JVM wants headroom Node does not). No secrets baked, no AWS API
+access needed at runtime beyond the optional SHIM_TOKEN secret injection.
+
+**Two runtime env vars every deployment must set:**
+
+- `SHIM_TIMEOUT_MS=15000` — a cold JVM's **first** evaluations exceed the 5s default
+  (observed live 2026-07-16: a fresh instance answered NOT_RUN → client BLOCKED_NO_PROOF —
+  fail-safe held, availability suffered). 15s covers cold-start; warm calls are unaffected.
+  `update-service` replaces the whole source configuration, so re-state it on every update.
+- `SHIM_TOKEN=<shared bearer token>` — the shim refuses non-`/healthz` requests without
+  `Authorization: Bearer <token>` (constant-time compare; `shim/auth.test.mjs`). This is an
+  **exposure control** for a public URL, never a safety boundary: the gateway serves
+  clinician-signed knowledge (no patient data), and the breath-ezy client is fail-closed
+  regardless — a 401 is a transport failure → BLOCKED_NO_PROOF. Unset = open, for local
+  containers only. The client sends the token from `HEYDOC_PHARM_CDS_TOKEN`; store the
+  value in Secrets Manager and inject via RuntimeEnvironmentSecrets on both services.
 
 ## The pin
 

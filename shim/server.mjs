@@ -19,12 +19,30 @@
  *   SHIM_PORT=8081 OPENCDS_BASE=... node shim/server.mjs
  */
 import { createServer } from "node:http";
+import { timingSafeEqual } from "node:crypto";
 import { buildHookRequest, mergeResults, SERVICE_FOR, DOSE_SERVICE } from "./map.mjs";
 
 const PORT = Number(process.env.SHIM_PORT || 8081);
 const BASE = (process.env.OPENCDS_BASE || "http://localhost:8080/opencds").replace(/\/+$/, "");
-/** Per-call. A KM that hangs must not hang the request — it becomes NOT_RUN like any other failure. */
+/** Per-call. A KM that hangs must not hang the request — it becomes NOT_RUN like any other failure.
+ *  Deploy note: a cold JVM's first evaluations exceed 5s (observed on App Runner, 2026-07-16, as
+ *  NOT_RUN → BLOCKED_NO_PROOF on a fresh instance) — deployed services set SHIM_TIMEOUT_MS=15000. */
 const TIMEOUT_MS = Number(process.env.SHIM_TIMEOUT_MS || 5000);
+/** Optional shared bearer token. The gateway serves clinician-signed KNOWLEDGE (never patient data)
+ *  and the client re-validates fail-closed — the token is an exposure control for a public staging
+ *  URL, not a safety boundary. Unset → open (local dev/containers); deployed services set SHIM_TOKEN. */
+const TOKEN = (process.env.SHIM_TOKEN || "").trim();
+
+/** Constant-time bearer check. Exported for the auth test. `/healthz` is never gated — a health
+ *  check that needs a secret is a health check the platform cannot run. */
+export function isAuthorized(authHeader, token = TOKEN) {
+  if (!token) return true;
+  const m = /^Bearer[ \t]+(.+)$/.exec(String(authHeader || "").trim());
+  if (!m) return false;
+  const presented = Buffer.from(m[1]);
+  const expected = Buffer.from(token);
+  return presented.length === expected.length && timingSafeEqual(presented, expected);
+}
 
 /** POST one CDS Hooks request. NEVER throws: a failure is a RESULT, because every failure mode here
  *  has the same safe answer (NOT_RUN) and a thrown error would take the other checks down with it. */
@@ -76,6 +94,7 @@ const send = (res, code, body) => {
 
 const server = createServer((req, res) => {
   if (req.method === "GET" && req.url === "/healthz") return send(res, 200, { ok: true, upstream: BASE });
+  if (!isAuthorized(req.headers.authorization)) return send(res, 401, { error: "unauthorized" });
   if (req.method !== "POST" || req.url !== "/pharm-check") return send(res, 404, { error: "not found" });
 
   let raw = "";
@@ -107,5 +126,5 @@ const server = createServer((req, res) => {
 });
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  server.listen(PORT, () => console.log(`fl30-shim: :${PORT} → ${BASE} (timeout ${TIMEOUT_MS}ms)`));
+  server.listen(PORT, () => console.log(`fl30-shim: :${PORT} → ${BASE} (timeout ${TIMEOUT_MS}ms, auth ${TOKEN ? "bearer-token" : "OPEN — set SHIM_TOKEN on any public deployment"})`));
 }
